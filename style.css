@@ -1,0 +1,538 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e5,
+        #fff0f5
+    );
+
+    color: #5a3040;
+
+    font-family: Georgia, serif;
+
+    text-align: center;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   COVER
+========================= */
+
+#cover {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px 20px;
+}
+
+
+.hati {
+
+    font-size: 65px;
+
+    margin-bottom: 10px;
+
+    color: #d96b91;
+
+    animation: denyut 1.8s ease-in-out infinite;
+}
+
+
+#cover h1 {
+
+    font-size: 40px;
+
+    margin: 0 0 15px;
+
+    color: #5a3040;
+}
+
+
+#cover p {
+
+    color: #6b1e3e;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    margin: 0 0 30px;
+}
+
+
+/* =========================
+   HIASAN COVER
+========================= */
+
+.hiasan {
+
+    margin-top: 25px;
+
+    font-size: 24px;
+
+    opacity: 0.7;
+
+    letter-spacing: 5px;
+
+    color: #d96b91;
+}
+
+
+/* =========================
+   TOMBOL BUKA
+========================= */
+
+#tombolBuka {
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: #d96b91;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+#tombolBuka:hover {
+
+    background-color: #b84f76;
+
+    transform: scale(1.05);
+}
+
+
+#tombolBuka:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   ISI PESAN
+========================= */
+
+#pesan {
+
+    display: none;
+
+    width: 100%;
+
+    padding: 50px 20px;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    padding: 40px 0;
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.story img {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(90, 48, 64, 0.15);
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+/* FOTO SAAT TAMPIL */
+
+.story.tampil img {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   CAPTION
+========================= */
+
+.caption {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    margin-top: 25px;
+
+    color: #6b1e3e;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+
+    transition-delay: 0.25s;
+}
+
+
+/* CAPTION SAAT TAMPIL */
+
+.story.tampil .caption {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   PESAN TERAKHIR
+========================= */
+
+.pesanAkhir {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+
+    line-height: 1.8;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+
+.pesanAkhir.tampil {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.pesanAkhir p {
+
+    max-width: 550px;
+
+    margin: 10px auto;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   HATI ENDING
+========================= */
+
+.hatiEnding {
+
+    font-size: 70px;
+
+    margin-bottom: 25px;
+
+    color: #d96b91;
+
+    animation: denyut 1.8s ease-in-out infinite;
+}
+
+
+.hiasanEnding {
+
+    margin-top: 30px;
+
+    font-size: 24px;
+
+    color: #d96b91;
+
+    letter-spacing: 5px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================
+   TOMBOL MUSIK
+========================= */
+
+#tombolMusik {
+
+    display: none;
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 20;
+
+    padding: 9px 20px;
+
+    border: 1px solid #e8a9bd;
+
+    border-radius: 20px;
+
+    background-color: white;
+
+    color: #6b1e3e;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(90, 48, 64, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+#tombolMusik:hover {
+
+    background-color: #fce1ea;
+
+    transform: scale(1.05);
+}
+
+
+#tombolMusik:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   HATI JATUH
+========================= */
+
+#hatiJatuh {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+
+.hatiJatuhItem {
+
+    position: absolute;
+
+    top: -30px;
+
+    color: #d96b91;
+
+    animation: jatuh linear forwards;
+}
+
+
+@keyframes jatuh {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   ANIMASI DENYUT
+========================= */
+
+@keyframes denyut {
+
+    0%,
+    100% {
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        transform: scale(1.12);
+    }
+}
+
+
+/* =========================
+   HP / MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    #cover h1 {
+
+        font-size: 30px;
+    }
+
+
+    #cover p {
+
+        font-size: 17px;
+    }
+
+
+    .story {
+
+        min-height: 90vh;
+
+        padding: 30px 0;
+    }
+
+
+    .story img {
+
+        max-width: 100%;
+
+        border-radius: 16px;
+    }
+
+
+    .caption {
+
+        font-size: 16px;
+
+        padding: 0 10px;
+    }
+
+
+    .pesanAkhir {
+
+        min-height: 80vh;
+    }
+
+
+    .pesanAkhir p {
+
+        font-size: 16px;
+    }
+
+
+    #tombolMusik {
+
+        right: 15px;
+
+        bottom: 15px;
+    }
+}
